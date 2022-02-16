@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "4073232d-5d10-48b2-81a9-68f9ca71b264",
+		"name": "Movies API Sasi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Genre",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "TimeSlot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/timeslot?theater_name=AEON Tebrau City Shopping Centre&time_start=2022-01-04 00:00:00&time_ends=2022-04-05 00:00:00",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"timeslot"
+					],
+					"query": [
+						{
+							"key": "theater_name",
+							"value": "AEON Tebrau City Shopping Centre"
+						},
+						{
+							"key": "time_start",
+							"value": "2022-01-04 00:00:00"
+						},
+						{
+							"key": "time_ends",
+							"value": "2022-04-05 00:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Specific Movie Theater",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Search Performer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/search_performer?performer_name=Malcolm McDowell",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"search_performer"
+					],
+					"query": [
+						{
+							"key": "performer_name",
+							"value": "Malcolm McDowell"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Give Rating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movie_title",
+							"value": "Arturo Schupp",
+							"contentType": "",
+							"description": "Title of the movie being reviewed",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Ringoe",
+							"description": "Username of the user creating the review",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "1",
+							"description": "Rating of the movie",
+							"type": "text"
+						},
+						{
+							"key": "r_description",
+							"value": "A masterpiece!",
+							"description": "Description of the rating",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/give_rating/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"give_rating",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Movies",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "AI Love You",
+							"description": "Title of the movie that we are going to add",
+							"type": "text"
+						},
+						{
+							"key": "release",
+							"value": "2022-02-15",
+							"description": "Release date of the movie that we are adding",
+							"type": "text"
+						},
+						{
+							"key": "length",
+							"value": "98",
+							"description": "Length of the movie that we are adding (in minutes)",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "As a collection of history's worst tyrants and criminal masterminds gather to plot a war to wipe out millions, one man must race against time to stop them.",
+							"description": "Description of the movie that we are adding",
+							"type": "text"
+						},
+						{
+							"key": "mpaa_rating",
+							"value": "PG-13",
+							"description": "MPAA rating of the movie that we are adding",
+							"type": "text"
+						},
+						{
+							"key": "genre[]",
+							"value": "action",
+							"description": "First genre of the movie that we are adding",
+							"type": "text"
+						},
+						{
+							"key": "genre[]",
+							"value": "adventure",
+							"description": "Second genre of the movie that we are adding",
+							"type": "text"
+						},
+						{
+							"key": "genre[]",
+							"value": "comedy",
+							"description": "Third genre of the movie that we are adding",
+							"type": "text"
+						},
+						{
+							"key": "director[]",
+							"value": "Matthew Vaughn",
+							"description": "Director name of the movie that we are adding",
+							"type": "text"
+						},
+						{
+							"key": "performer[]",
+							"value": "Gemma Arterton",
+							"description": "Performer in the movie that we are adding",
+							"type": "text"
+						},
+						{
+							"key": "performer[]",
+							"value": "Matthew Goode",
+							"description": "Performer in the movie that we are adding",
+							"type": "text"
+						},
+						{
+							"key": "performer[]",
+							"value": "Ralph Fiennes",
+							"description": "Performer in the movie that we are adding",
+							"type": "text"
+						},
+						{
+							"key": "language[]",
+							"value": "English",
+							"description": "Language of the movie that we are adding",
+							"type": "text"
+						},
+						{
+							"key": "language[]",
+							"value": "Malay",
+							"description": "Language of the movie that we are adding",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/add_movie/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"add_movie",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
